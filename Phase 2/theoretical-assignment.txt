@@ -1,0 +1,86 @@
+// Node.js
+
+// Q1 Which npm commands do our developer use when working on klient?
+
+ANS - npm ci
+
+//  Q2 What is the minimum node version in package.json?
+ANS -  13.0.0
+
+
+
+//  Q3 What npm command starts the documentation server in klient project?
+
+ANS - npm run start:developer
+
+
+
+
+//  Q4 List 3 dependecies that are not update to date in the project? List down thier latest version.
+
+ANS - Dependecies that are not update to date in the project are following - 
+      
+      1. typescipt  // latest version - 4.2.4
+      2. dotenv     // latest version - 9.0.2
+      3. lodash     // latest version - 4.17.21
+
+
+
+
+//  Q5 What does the server.ts file export?
+
+ANS - server.ts files creates an instance of server class and exports it.
+
+
+
+//  Q6 What is the prefix to all the api end points in the backend? (hint: look into server.ts file).
+
+ANS - /api/v1
+
+
+
+//  Q7 Name 3 middlewares that are being used and briefly describe what they do?
+
+ANS - middlewares that are being used are following - 
+     1. authenticationMiddleware // This middleware is used for authentocation
+     2. adminHasClientAccess //
+     3. hasDivisionAccess    // 
+
+
+
+
+//  Q9 Name the 2 custom exceptions that are being used in the project.
+
+ANS - Custom exceptions that are being used in the project are folllowing -
+      
+      1. UserMessageNotSetError
+      2. UnsetEnvironmentVariableError
+
+
+
+
+//  Q10 What npm command is being used to run unit tests?
+
+ANS - npm run test
+
+
+
+
+
+// Docker
+
+//  Q1 What is the command that is used to start the postgres database and redis on local for development pruposes?
+
+ANS - docker-compose -f base.yml -f local.yml up -d
+
+
+
+//  Q2 What is the command that is used to stop the postgres database and redis on local for development pruposes?
+
+ANS - docker-compose -f base.yml -f local.yml down -d
+
+
+
+//  Q3 What is the version of redis that is being used for local development?
+
+ANS - 2.8.0
