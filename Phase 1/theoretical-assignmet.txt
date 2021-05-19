@@ -1,0 +1,82 @@
+// Typescript
+
+// Q1 How many tsconfig.json files are present in the backend project?
+
+Ans - There are 2 tsconfig.json files present in backend project.
+
+
+// Q2 What sub-rules of the strict rule are being used in the main tsconfig.json file?
+
+ANS - Following sub-riles of the strict rules are being used in the main tsconfig.json file -
+
+alwaysStrict
+noImplicitAny
+noImplicitThis
+strictNullChecks
+
+// Q3 What paths to folders are exlcuded when generating a build with tsc?
+
+ANS - The following folders are excluded when generating a build with tsc
+
+**/*.spec.ts    // This excludes any file in any folder with spec.ts extension
+src/documentation-server/**  // this excludes each  folder inside src/documentation-server
+src/test/**   // This excludes any folder inside src/test
+
+// Q4 Identify various typescript language keywords that are being used throughout the project (you don't have to go through all the files, just a few).
+
+ANS - Keywords that are being used throughout the project are -
+
+import 
+export 
+number
+string
+boolean
+enum
+interface
+
+
+/* Q5 Identify 3 areas in the project which can be improved with respect to typescript? (For example missing types, use a better language feature, etc). Specify the file you found it in and specify how you can improve it. All the 3 areas cannot be of same type.
+*/
+
+
+ANS - 
+
+1. Missing return type in function in user-type.controller.ts at line 46 
+
+impovement - add return type which is ApiResponse<object>
+
+2. Wrong return type in function in 1565760083382-carriers.ts at line 
+
+improvemet - use correct return type which is void
+
+
+
+
+// Git
+
+// Q1 Explain the git workflow that we use in development of klient project.
+
+ANS - First of all we clone the existing klient peoject . then we switch to branch we want to work on using git checkout command, if we want to work on new branch then we create new branch and checkout that branch using git checkout -b command. after all changes are made then we add all the files in which we have made changes to staging area using command git add 'finename'.Then we commit with meaningful commit message using command git commit -m 'commit message'. then we push to the github using command git push origin branchname.If we want to merge code of the branch on which we have pushed the code to some other branch then we create a pull request.
+If there are conflicts in merging that will be shown on github. If there are conflicts then we will resolve them. To resolve we checkout to branch to which we want to merge. then we run pull command.then we checkout the branch on which we ppushed the code.then we run reabse command.then we resolve conflicts and add files in which we made changes to resolve conflicts to staging area.then we again push to the branch.
+
+// Q2 What automated actions run when you create a new pr on github for the klient project? Brielfy explain what these actions do. (hint: go check some already open PRs).
+
+ANS - following automated actions run when we create a new pr on github - 
+
+WIP // This checks for WIP in commit message 
+
+Validate FE / slack-notification 
+
+Validate FE / lint-frontend 
+
+Validate FE / build-fe-landing // This is used to generate build of landing folder of frontend
+
+Validate FE / build-fe-superadmin // This is used to generate bulid of superadmin of frontend
+
+Validate FE / build-fe-admin // This is used to generate build of admin folder of frontend
+
+Run Protractor Tests / slack-notification
+
+Validate FE / build-fe-cabinet
+
+Run Protractor Tests / protractor-tests
