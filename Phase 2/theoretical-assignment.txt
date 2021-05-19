@@ -11,7 +11,7 @@ ANS -  13.0.0
 
 //  Q3 What npm command starts the documentation server in klient project?
 
-ANS - npm run start:developer
+ANS - npm run start:dev
 
 
 
